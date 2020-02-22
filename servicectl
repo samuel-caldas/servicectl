@@ -1,10 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 # Control services for system based on Systemd inside chroot and SysVinit outside chroot
 # https://github.com/smaknsk/servicectl
 #
 
 # Pach systemd services file
-SYSTEMD_UNITS_PATH="/usr/lib/systemd/system/"
+SYSTEMD_UNITS_PATH="/lib/systemd/system/"
 
 # Path locate this script
 DIR=$(dirname $(readlink -f $0))
@@ -13,7 +13,7 @@ DIR=$(dirname $(readlink -f $0))
 SERVICECTL_ENABLED_PATH="$DIR/enabled/"
 
 # Check is root
-if [ $EUID -ne 0 ]; then
+if [ "$(id -u)" != "0" ]; then
   echo "You must run as root user" 2>&1
   exit 1
 fi
