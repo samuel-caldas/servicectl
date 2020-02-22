@@ -27,9 +27,9 @@ ArchLinux - https://aur.archlinux.org/packages/servicectl/
 ### Manual:
 ```bash
 wget https://github.com/samuelcaldas/servicectl/archive/1.1.tar.gz
-tar -xf 1.0.tar.gz -C /usr/local/lib/
-ln -s /usr/local/lib/servicectl-1.0/servicectl /usr/local/bin/servicectl
-ln -s /usr/local/lib/servicectl-1.0/serviced /usr/local/bin/serviced
+tar -xf 1.1.tar.gz -C /usr/local/lib/
+ln -s /usr/local/lib/servicectl-1.1/servicectl /usr/local/bin/servicectl
+ln -s /usr/local/lib/servicectl-1.1/serviced /usr/local/bin/serviced
 ```
 
 Usage
